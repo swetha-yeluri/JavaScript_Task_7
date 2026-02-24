@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**********LEVEL 1 - Array Methods Tasks*********/
+        //TASK 1 - forEach()
+        let names = ["Arun", "Bala", "Charan", "David"];
+        names.forEach((name, i) => {
+            console.log(`${i + 1} -  ${name}`);
+        });
+
+        //TASK 2 - MAP()
+        let Numbers = [2,4,6,8];
+        let Squares = Numbers.map(currentElement => currentElement * currentElement);
+        console.log(Squares);
+
+        //TASK 3 - filter()
+        let Products = [
+            { name: "Mobile", price: 15000 },
+            { name: "Laptop", price: 60000 },
+            {  name: "Keyboard", price: 1000 },
+            { name: "Monitor", price: 12000 }
+    ];
+    let productcondition = Products.filter(p => p.price > 10000);
+    console.log(productcondition);
+
+    //TASK 4 - find()
+    let foundProduct = Products.find(p => p.price > 10000);
+    console.log(foundProduct);
+
+    //TASK 5 - reduce()
+    let Marks = [80, 75, 90, 60];
+    let total = Marks.reduce((sum,m) => sum + m, 0);
+    let Average = total / Marks.length;
+    console.log("total = ", total);
+    console.log("Average = ", Average);
+
+    //TASK 6 - some()
+    let Ages = [12, 15, 17, 22];
+    let someCheck = Ages.some(Age => Age > 18);
+    console.log(someCheck);
+
+    //TASK 7 - every()
+    let Scores = [60, 70, 80, 90];
+    let everyCheck = Scores.every(score => score >= 35);
+    console.log(everyCheck);
+
+    //TASK 8 - sort()
+    let Prices = [200, 40, 1000, 5, 75];
+    let ascendingSort = [...Prices].sort((a , b) => a - b);
+    let descendingSort = [...Prices].sort((a , b) => b - a);
+    console.log("Ascending:",ascendingSort);
+    console.log("Descending:",descendingSort);
+
+    /************LEVEL 2 - String Method Tasks**************/
+
+    //TASK 9 - Capitalize First Letter
+    let Name = "naveen";
+    let U = Name.slice(0 , 1).toUpperCase() + Name.slice(1);
+    console.log(U);
+
+    //TASK 10 - Count Letter
+    let Text = "javascript";
+    let CountText = Text.split("a").length - 1;
+    console.log(CountText);
+
+    //TASK 11 - Clean Input
+    let UserInput = "  Hello World  ";
+    let Clean = UserInput.trim().toUpperCase();
+    console.log(Clean);
+
+    //TASK 12 - Replace & Check
+    let Sentence = "I love python";
+    let Replace = Sentence.replace("python", "javascript");
+    let Check1 = Sentence.startsWith("I");
+    let Check2 = Sentence.endsWith("javascript");
+    console.log(Replace);
+    console.log(Check1);
+    console.log(Check2);
+
+    //BONUS TASK - Employee Salary System
+
+    let employeeName = "Ravi";
+    let basicSalary = 30000;
+    let performance = "excellent";
+
+    let bonus = 0;
+
+    if (performance === "excellent")
+    {
+        bonus = basicSalary * 0.10;
+
+    }
+    else if (performance === "good")
+    {
+        bonus = basicSalary * 0.10;
+    }
+    else if (performance === "average")
+    {
+        bonus = basicSalary * 0.05;
+
+    }
+    else
+    {
+        bonus = 0;
+    }
+    let totalSalary = basicSalary + bonus ;
+    console.log("Employee Name:", employeeName);
+    console.log("Basic Salary:", basicSalary);
+    console.log("Performance:", performance);
+    console.log("Bonus Amount:", bonus);
+    console.log("Total Salary:", totalSalary);
+
+            
+            
+        
+    </script>
+</body>
+</html>
